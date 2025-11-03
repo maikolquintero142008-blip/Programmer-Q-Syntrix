@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Q-Syntrix | Programador</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header>
+    <form id="loginForm">
+  <input type="text" id="username" placeholder="Usuario" required />
+  <input type="password" id="password" placeholder="Contraseña" required />
+  <input type="file" id="profilePic" accept="image/*" required />
+  <button type="submit" class="btn">Entrar</button>
+</form>
+    <div id="userProfile" class="user-profile">
+  <img id="userImage" src="" alt="Perfil" />
+  <span id="userName"></span>
+  <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+</div>
+    <div id="userProfile" class="user-profile">
+  <img id="userImage" src="" alt="Perfil" />
+  <span id="userName"></span>
+</div>
+    <nav class="navbar">
+      <div class="nav-left">
+        <ul class="nav-links">
+          <li><a href="#" class="nav-btn" data-modal="homeModal">HOME</a></li>
+          <li><a href="#" class="nav-btn" data-modal="aboutModal">ABOUT</a></li>
+          <li><a href="#" class="nav-btn" data-modal="productsModal">PRODUCTS</a></li>
+          <li><a href="#" class="nav-btn" data-modal="contactModal">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="#" class="sign-in-btn">SIGN IN</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sección principal -->
+  <main>
+    <section class="hero">
+  <video autoplay muted loop playsinline class="background-video" aria-hidden="true">
+    <source src="video/Hailuo_Video_441515163085176841.mp4" type="video/mp4" />
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <div class="hero-text">
+    <h1>Programmer</h1>
+    <p>Explora el mundo del desarrollo web, software, inteligencia artificial y más.<br>
+       Únete a nuestra comunidad de aprendizaje y lleva tus habilidades al siguiente nivel.</p>
+    <a href="#" class="btn" id="learnMoreBtn">LEARN MORE</a>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Modales -->
+  <div id="homeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>HOME</h2>
+      <p>Bienvenido, desarrollado por Q-Syntrix. Tu espacio para aprender, practicar y compartir conocimientos sobre programación. Aquí comienza tu viaje como desarrollador.</p>
+    </div>
+  </div>
+
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>ABOUT</h2>
+      <p>Somos una comunidad dedicada a impulsar el aprendizaje de programación. Desde HTML y CSS hasta inteligencia artificial, aquí encuentras recursos y apoyo.</p>
+    </div>
+  </div>
+
+  <div id="productsModal" class="modal">
+    <div class="product-icons">
+  <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">
+    <img src="icons/descarga (1).jpeg" alt="Java" title="Descargar Java" />
+  </a>
+  <a href="https://www.python.org/downloads/" target="_blank">
+    <img src="icons/Build Python Apps Quickly.jpeg" alt="Python" title="Descargar Python" />
+  </a>
+  <a href="https://nodejs.org/en/download/" target="_blank">
+    <img src="icons/The Power of Node_js_ Advantages Over Traditional Server-Side Languages _ Geekboots.jpeg" alt="Node.js" title="Descargar Node.js" />
+  </a>
+  <a href="https://git-scm.com/downloads" target="_blank">
+    <img src="icons/Giá Bản Quyền GitHub Copilot Enterprise_ Cập Nhật Tháng 10_2025.jpeg" alt="Git" title="Descargar Git" />
+  </a>
+  <a href="https://flutter.dev/docs/get-started/install" target="_blank">
+    <img src="icons/Flutter Logo Vector.jpeg" alt="Flutter" title="Descargar Flutter" />
+  </a>
+</div>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>PRODUCTS</h2>
+      <p>Ofrecemos cursos interactivos, proyectos guiados y herramientas para desarrolladores. Todo lo que necesitas para crecer como programador está aquí.</p>
+    </div>
+  </div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>CONTACT</h2>
+      <p>¿Tienes dudas o quieres colaborar? Escríbenos a contacto@qsyntrix.dev o únete a nuestro Discord<a href= "https://discord.gg/wREvbxDvNC">
+         para hablar con otros programadores.</p>
+    </div>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Iniciar sesión</h2>
+     <form id="loginForm">
+  <input type="text" id="username" placeholder="Usuario" required />
+  <input type="password" id="password" placeholder="Contraseña" required />
+  <input type="file" id="profilePic" accept="image/*" required />
+  <button type="submit" class="btn">Entrar</button>
+</form>
+    </div>
+  </div>
+
+  <div id="coursesModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Cursos de Programación</h2>
+     <div class="course-list">
+  <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" class="course-item">
+    <h3>HTML & CSS</h3>
+    <p>Aprende a construir y diseñar páginas web desde cero. HTML estructura el contenido y CSS le da estilo visual.</p>
+  </a>
+  <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank" class="course-item">
+    <h3>JavaScript</h3>
+    <p>Agrega interactividad a tus sitios web. Aprende lógica, eventos, animaciones y manipulación del DOM.</p>
+  </a>
+  <a href="https://www.python.org/" target="_blank" class="course-item">
+    <h3>Python</h3>
+    <p>Lenguaje versátil para automatización, desarrollo web, ciencia de datos e inteligencia artificial.</p>
+  </a>
+  <a href="https://react.dev/" target="_blank" class="course-item">
+    <h3>React</h3>
+    <p>Biblioteca de JavaScript para crear interfaces modernas, rápidas y dinámicas con componentes reutilizables.</p>
+  </a>
+  <a href="https://nodejs.org/" target="_blank" class="course-item">
+    <h3>Node.js</h3>
+    <p>Permite usar JavaScript en el servidor. Ideal para crear APIs, aplicaciones en tiempo real y backend escalable.</p>
+  </a>
+  <a href="https://www.mysql.com/" target="_blank" class="course-item">
+    <h3>SQL</h3>
+    <p>Lenguaje para gestionar bases de datos. Aprende a almacenar, consultar y organizar información de forma eficiente.</p>
+  </a>
+  <a href="https://git-scm.com/" target="_blank" class="course-item">
+    <h3>Git & GitHub</h3>
+    <p>Control de versiones y colaboración en proyectos. Aprende a guardar cambios, trabajar en equipo y publicar tu código.</p>
+  </a>
+  <a href="https://www.ibm.com/cloud/learn/what-is-artificial-intelligence" target="_blank" class="course-item">
+    <h3>Inteligencia Artificial</h3>
+    <p>Introducción al aprendizaje automático, redes neuronales y cómo las máquinas pueden tomar decisiones inteligentes.</p>
+  </a>
+  <a href="https://flutter.dev/" target="_blank" class="course-item">
+    <h3>Flutter</h3>
+    <p>Framework de Google para crear aplicaciones móviles nativas para Android y iOS con una sola base de código.</p>
+  </a>
+  <a href="https://www.cisa.gov/news-events/news/what-cybersecurity" target="_blank" class="course-item">
+    <h3>Seguridad Informática</h3>
+    <p>Aprende a proteger sistemas, redes y datos. Conoce los fundamentos de ciberseguridad y buenas prácticas.</p>
+  </a>
+</div>
+
+
+ <!-- Script -->
+  <script>
+    const modals = document.querySelectorAll(".modal");
+    const navButtons = document.querySelectorAll(".nav-btn");
+    const signInBtn = document.querySelector(".sign-in-btn");
+    const loginModal = document.getElementById("loginModal");
+    const loginForm = document.getElementById("loginForm");
+    const learnMoreBtn = document.getElementById("learnMoreBtn");
+    const coursesModal = document.getElementById("coursesModal");
+
+    navButtons.forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        const target = document.getElementById(btn.dataset.modal);
+        target.classList.add("show");
+      });
+    });
+
+    signInBtn.addEventListener("click", e => {
+      e.preventDefault();
+      loginModal.classList.add("show");
+    });
+
+    learnMoreBtn.addEventListener("click", e => {
+      e.preventDefault();
+      coursesModal.classList.add("show");
+    });
+
+    modals.forEach(modal => {
+      modal.querySelector(".close").addEventListener("click", () => {
+        modal.classList.remove("show");
+      });
+
+      window.addEventListener("click", e => {
+        if (e.target === modal) {
+          modal.classList.remove("show");
+        }
+      });
+    });
+
+    loginForm.addEventListener("submit", e => {
+      e.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username && password) {
+        alert("Inicio de sesión exitoso");
+        loginModal.classList.remove("show");
+        loginForm.reset();
+      } else {
+        alert("Por favor, completa todos los campos");
+      }
+    });
+const userProfile = document.getElementById("userProfile");
+const userImage = document.getElementById("userImage");
+const userName = document.getElementById("userName");
+const logoutBtn = document.getElementById("logoutBtn");
+
+loginForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const fileInput = document.getElementById("profilePic");
+  const file = fileInput.files[0];
+
+  if (username && password && file) {
+    const reader = new FileReader();
+    reader.onload = function () {
+      userImage.src = reader.result;
+      userName.textContent = username;
+      userProfile.style.display = "flex";
+      loginModal.classList.remove("show");
+      loginForm.reset();
+    };
+    reader.readAsDataURL(file);
+  } else {
+    alert("Por favor, completa todos los campos y selecciona una imagen");
+  }
+});
+
+// Mostrar perfil si ya está guardado
+window.addEventListener("load", () => {
+  const savedName = localStorage.getItem("username");
+  const savedPic = localStorage.getItem("profilePic");
+
+  if (savedName && savedPic) {
+    userImage.src = savedPic;
+    userName.textContent = savedName;
+    userProfile.style.display = "flex";
+  }
+});
+
+// Guardar perfil al iniciar sesión
+loginForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const fileInput = document.getElementById("profilePic");
+  const file = fileInput.files[0];
+
+  if (username && password && file) {
+    const reader = new FileReader();
+    reader.onload = function () {
+      localStorage.setItem("username", username);
+      localStorage.setItem("profilePic", reader.result);
+      userImage.src = reader.result;
+      userName.textContent = username;
+      userProfile.style.display = "flex";
+      loginModal.classList.remove("show");
+      loginForm.reset();
+    };
+    reader.readAsDataURL(file);
+  } else {
+    alert("Por favor, completa todos los campos y selecciona una imagen");
+  }
+});
+// Mostrar perfil si ya está guardado
+window.addEventListener("load", () => {
+  const savedName = localStorage.getItem("username");
+  const savedPic = localStorage.getItem("profilePic");
+
+  if (savedName && savedPic) {
+    userImage.src = savedPic;
+    userName.textContent = savedName;
+    userProfile.style.display = "flex";
+  }
+});
+
+// Cerrar sesión
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("username");
+  localStorage.removeItem("profilePic");
+  userProfile.style.display = "none";
+});
+  </script>
+
+</body>
+</html>
